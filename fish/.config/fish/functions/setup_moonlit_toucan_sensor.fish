@@ -1,7 +1,0 @@
-function setup_moonlit_toucan_sensor
- circup install
-circup install asyncio
-circup install adafruit_pn532
-circup install adafruit_requests
-circup install adafruit_connection_manager
-end
