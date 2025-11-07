@@ -1,0 +1,10 @@
+[tools]
+node = "latest"
+ruby = "latest"
+elixir = "latest"
+erlang = "latest"
+deno = "latest"
+python = "latest"
+
+[settings]
+python_compile = true

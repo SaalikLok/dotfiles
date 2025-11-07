@@ -1,0 +1,14 @@
+[language-server.emmet-ls]
+command = "emmet-ls"
+args = ["--stdio"]
+
+[language-server.tailwindcss-ls]
+command = "tailwindcss-language-server"
+args = ["--stdio"]
+
+[[language]]
+name = "html"
+language-servers = ["vscode-html-language-server", "emmet-ls", "tailwindcss-ls"]
+formatter = { command = 'prettier', args = ["--parser", "html"] }
+auto-format = true
+
