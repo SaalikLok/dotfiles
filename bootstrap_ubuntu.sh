@@ -17,7 +17,7 @@ done
 # Install Yazi (Debian/Ubuntu path)
 if ! command -v yazi >/dev/null 2>&1; then
   echo "🦆 Installing Yazi (Debian/Ubuntu)"
-  bash ./scripts/yazi_install.sh
+  bash ./scripts/install_yazi_ubuntu.sh
 else
   echo "Already have Yazi 🧬"
 fi
