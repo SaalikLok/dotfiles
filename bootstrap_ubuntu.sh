@@ -5,7 +5,7 @@ echo "🐧 Saalik's Linux is getting setup..."
 
 # Core packages via apt (excluding helix and kitty per your preferences)
 sudo apt update
-for tool in git stow fish yazi; do
+for tool in git stow fish; do
   if ! command -v $tool &> /dev/null; then
     echo "Installing $tool 🐧"
     sudo apt install -y $tool
@@ -13,6 +13,14 @@ for tool in git stow fish yazi; do
     echo "Already have $tool 🧬"
   fi
 done
+
+# Install Yazi (Debian/Ubuntu path)
+if ! command -v yazi >/dev/null 2>&1; then
+  echo "🦆 Installing Yazi (Debian/Ubuntu)"
+  bash ./scripts/yazi_install.sh
+else
+  echo "Already have Yazi 🧬"
+fi
 
 # Helix from PPA (preferred source)
 if ! command -v helix &> /dev/null && ! command -v hx &> /dev/null; then
