@@ -24,7 +24,7 @@ else
 fi
 
 # core tools
-for tool in fish stow git helix yazi; do
+for tool in fish stow git helix; do
   if ! command -v $tool &> /dev/null; then
     echo "Installing $tool 🐠"
     brew install $tool
@@ -43,7 +43,7 @@ fi
 
 echo "🗃️ creating symlinks with Stow"
 cd ~/.dotfiles
-stow -R fish helix kitty yazi git mise
+stow -R fish helix kitty git mise
 
 # Fish plugins and Fisher
 if ! fish -c "type -q fisher" &> /dev/null; then

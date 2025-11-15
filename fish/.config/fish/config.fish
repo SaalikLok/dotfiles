@@ -21,16 +21,6 @@ function mrm
     bin/rails db:migrate
 end
 
-function y
-    set tmp (mktemp -t "yazi-cwd.XXXXXX")
-    yazi $argv --cwd-file="$tmp"
-    if read -z cwd <"$tmp"; and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-        builtin cd -- "$cwd"
-    end
-    rm -f -- "$tmp"
-end
-
-# Activate mise for runtime management
 if test -x ~/.local/bin/mise
     ~/.local/bin/mise activate fish | source
 end

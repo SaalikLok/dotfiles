@@ -14,14 +14,6 @@ for tool in git stow fish; do
   fi
 done
 
-# Install Yazi (Debian/Ubuntu path)
-if ! command -v yazi >/dev/null 2>&1; then
-  echo "🦆 Installing Yazi (Debian/Ubuntu)"
-  bash ./scripts/install_yazi_ubuntu.sh
-else
-  echo "Already have Yazi 🧬"
-fi
-
 # Helix from PPA (preferred source)
 if ! command -v helix &> /dev/null && ! command -v hx &> /dev/null; then
   echo "📦 Adding Helix PPA and installing helix"
@@ -58,7 +50,7 @@ fi
 
 echo "🗃️ creating symlinks with Stow"
 cd ~/.dotfiles
-stow -R fish helix kitty yazi git mise
+stow -R fish helix kitty git mise
 
 # Fisher and Fish plugins
 if ! fish -c "type -q fisher" &> /dev/null; then
