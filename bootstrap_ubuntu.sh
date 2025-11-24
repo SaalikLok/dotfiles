@@ -49,7 +49,6 @@ else
 fi
 
 echo "🗃️ creating symlinks with Stow"
-cd ~/.dotfiles
 stow -R fish helix kitty git mise
 
 # Fisher and Fish plugins
